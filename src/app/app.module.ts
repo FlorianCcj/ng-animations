@@ -13,6 +13,9 @@ import { UsersComponent } from './session2-video33/users/users.component';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { ProjectsService } from './session2-video33/projects/projects.service';
+import {AppCssAnimComponent} from './section3/app-css-anim.component';
+import { Lecture58Component } from './section4-ng-animation/lecture58/lecture58.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -23,13 +26,17 @@ import { ProjectsService } from './session2-video33/projects/projects.service';
     ProjectsComponent,
     ProjectComponent,
     NewProjectComponent,
-    UsersComponent
+    UsersComponent,
+    AppCssAnimComponent,
+    Lecture58Component,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    // #section4
+    BrowserAnimationsModule
   ],
   providers: [ProjectsService],
   bootstrap: [AppComponent]

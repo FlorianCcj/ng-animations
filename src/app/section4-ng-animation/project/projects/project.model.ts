@@ -1,0 +1,7 @@
+// #section2-video33
+
+export interface Project {
+  name: string;
+  description: string;
+  status: string;
+}
