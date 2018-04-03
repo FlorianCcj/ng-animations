@@ -16,6 +16,7 @@ import { ProjectsService } from './session2-video33/projects/projects.service';
 import {AppCssAnimComponent} from './section3/app-css-anim.component';
 import { Lecture58Component } from './section4-ng-animation/lecture58/lecture58.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { Section5BeginComponent } from './section5/section5-begin/section5-begin.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     UsersComponent,
     AppCssAnimComponent,
     Lecture58Component,
+    Section5BeginComponent,
   ],
   imports: [
     BrowserModule,

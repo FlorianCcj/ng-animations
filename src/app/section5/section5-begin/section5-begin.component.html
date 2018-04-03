@@ -1,0 +1,27 @@
+<!--#section5-->
+<button (click)="isShown = !isShown">Toggle Element</button>
+<!--statefirst<p
+  *ngIf="isShown"
+  [@showState]="!isShown ? 'notShown' : 'shown'"
+>-->
+<p
+  *ngIf="isShown"
+  @showState
+>You can see me now!</p>
+
+
+<button (click)="width -= 50 ">Shrink</button>
+<button (click)="animate = true ">Animate Me</button>
+<p
+  [ngStyle]="{'width.px': width}"
+  [@animateState]="animate ? 'animated' : 'noAnimation'"
+>Shrink me</p>
+<hr/>
+<button (click)="onAddElement()">Add Element</button>
+<div
+  *ngFor="let testResult of testResults"
+  class="test-result"
+  @showState
+>
+  {{testResult}}
+</div>
