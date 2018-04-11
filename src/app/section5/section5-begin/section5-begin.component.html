@@ -21,7 +21,9 @@
 <div
   *ngFor="let testResult of testResults"
   class="test-result"
-  @showState
+  @listState
+  (@listState.start)="handleAnimationStarted($event)"
+  (@listState.done)="handleAnimationDone()"
 >
   {{testResult}}
 </div>

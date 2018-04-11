@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {showStateTrigger, animateStateTrigger} from './animations';
+import {showStateTrigger, animateStateTrigger, listStateTrigger} from './animations';
 // #section5
 @Component({
   selector: 'app-section5-begin',
@@ -7,7 +7,8 @@ import {showStateTrigger, animateStateTrigger} from './animations';
   styleUrls: ['./section5-begin.component.scss'],
   animations: [
     showStateTrigger,
-    animateStateTrigger
+    animateStateTrigger,
+    listStateTrigger
   ]
 })
 export class Section5BeginComponent {
