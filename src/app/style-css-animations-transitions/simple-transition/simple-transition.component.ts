@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-simple-transition',
   templateUrl: './simple-transition.component.html',
   styleUrls: ['./simple-transition.component.scss']
 })
-export class SimpleTransitionComponent implements OnInit {
+export class SimpleTransitionComponent {
+
+  divClicked = false;
 
   constructor() { }
-
-  ngOnInit() {
-  }
-
 }
