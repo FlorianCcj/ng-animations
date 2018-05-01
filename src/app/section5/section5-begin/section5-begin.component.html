@@ -10,7 +10,7 @@
 >You can see me now!</p>
 
 
-<button (click)="width -= 50 ">Shrink</button>
+<button (click)="width = width - 50 ">Shrink</button>
 <button (click)="animate = true ">Animate Me</button>
 <p
   [ngStyle]="{'width.px': width}"
