@@ -20,8 +20,10 @@ import {StyleRoutingModule} from './style-routing.module';
   declarations: [
     StyleMultiCompComponent,
     StyleSingleCompComponent,
+    GoalComponent, QuoteComponent, AuthorComponent,
     ProjectStyleComponent,
-    GoalComponent, QuoteComponent, AuthorComponent, NewProjectComponent, ProjectComponent, ProjectsComponent, UsersComponent
+    NewProjectComponent, ProjectComponent, ProjectsComponent,
+    UsersComponent
   ]
 })
 export class StyleModule { }

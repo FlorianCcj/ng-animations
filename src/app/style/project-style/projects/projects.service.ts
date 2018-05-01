@@ -7,11 +7,11 @@ export class ProjectsService {
   private projects: Project[] = [
     {
       name: 'Learn Angular Styles',
-      description: 'Practice hard to understand how you may style components and update styles dynamically', 
+      description: 'Practice hard to understand how you may style components and update styles dynamically',
       status: 'active'
     },
     {
-      name: 'Learn Angular Animations', 
+      name: 'Learn Angular Animations',
       description: 'Learn how Angular helps with animating elements on your page',
       status: 'active'
     },

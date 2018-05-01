@@ -12,14 +12,15 @@ special selector:
 * :host-context :style elements inside a component, depending on some condition set outside of it
 * /deep/ : apply styles not just to the elements in the template but also to child component
 
-
-[ngClass]="{class1: condition}"
+<pre>
+[ngClass]="{{'{'}}class1: condition}"
 [ngClass]="'class1 class2'"
 [ngClass]="[class1 class2]"
-[ngClass]="{'class1 class2': condition}"
+[ngClass]="{{'{'}}'class1 class2': condition}"
 
-[ngStyle]="{'background-color': 'red'}"
-[ngStyle]="{'width.px': 200}"
+[ngStyle]="{{'{'}}'background-color': 'red'}"
+[ngStyle]="{{'{'}}'width.px': 200}"
+</pre>
 
 <div class="container">
   <div class="row">
