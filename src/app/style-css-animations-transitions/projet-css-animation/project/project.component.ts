@@ -25,7 +25,6 @@ export class ProjectComponent implements OnInit {
     this.projectDeleted.emit();
   }
 
-  // step2
   getPrjStatusClass() {
     return {
       'label-success': this.project.status === 'active',
