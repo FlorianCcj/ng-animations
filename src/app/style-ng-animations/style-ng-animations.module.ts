@@ -1,3 +1,5 @@
+/* tslint:disable:max-line-length */
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProjetNgAnimationsComponent } from './projet-ng-animations/projet-ng-animations.component';
@@ -7,15 +9,16 @@ import { ProjectsComponent } from './projet-ng-animations/projects/projects.comp
 import { UsersComponent } from './projet-ng-animations/users/users.component';
 import { SimpleNgAnimationComponent } from './simple-ng-animation/simple-ng-animation.component';
 import { AnimationWithTransitionComponent } from './animation-with-transition/animation-with-transition.component';
-import { IndexComponent } from './index/index.component';
 import { NgAnimationIndexComponent } from './ng-animation-index/ng-animation-index.component';
 import { AnimationWithMultipleTransitionsComponent } from './animation-with-multiple-transitions/animation-with-multiple-transitions.component';
 import { AnimationWithTemporaryStateComponent } from './animation-with-temporary-state/animation-with-temporary-state.component';
 import { AnimationMultiStepTransitionComponent } from './animation-multi-step-transition/animation-multi-step-transition.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    BrowserAnimationsModule
   ],
   declarations: [
     ProjetNgAnimationsComponent,
@@ -25,11 +28,10 @@ import { AnimationMultiStepTransitionComponent } from './animation-multi-step-tr
     UsersComponent,
     SimpleNgAnimationComponent,
     AnimationWithTransitionComponent,
-    IndexComponent,
     NgAnimationIndexComponent,
     AnimationWithMultipleTransitionsComponent,
     AnimationWithTemporaryStateComponent,
     AnimationMultiStepTransitionComponent,
-  ]
+  ],
 })
 export class StyleNgAnimationsModule { }
