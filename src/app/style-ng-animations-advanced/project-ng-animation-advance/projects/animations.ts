@@ -1,40 +1,16 @@
-import { trigger, state, style, animate, transition } from '@angular/animations';
+import { trigger, state, style, animate, transition, keyframes } from '@angular/animations';
 
-/* step1 */
 export const markedTrigger = trigger('markedTrigger', [
-  /* step1 */
-  // state('default', style({
-  //   border: '1px solid black',
-  //   backgroundColor: 'transparent',
-  // })),
-  /* step3 */
   state('default', style({
     border: '1px solid black',
     backgroundColor: 'transparent',
     padding: '20px',
   })),
-  /* step1 */
-  // state('default', style({
-  //   border: '2px solid blue',
-  //   backgroundColor: '#caeff9',
-  // })),
-  /* step3 */
   state('default', style({
     border: '1px solid black',
     backgroundColor: 'transparent',
     padding: '19px',
   })),
-  /* step2 */
-  // transition('default <=> marked', animate('300ms ease-out')),
-  /* step3 */
-  // transition('default => marked', [
-  //   style({
-  //     border: '2px solid black',
-  //     padding: '19px',
-  //   }),
-  //   animate('300ms ease-out')
-  // ]),
-  /* step4 */
   transition('default => marked', [
     style({
       border: '2px solid black',
@@ -45,12 +21,73 @@ export const markedTrigger = trigger('markedTrigger', [
     })),
     animate(200)
   ]),
-  /* step3 */
   transition('marked => default', [
     style({
       border: '1px solid blue',
       padding: '20px',
     }),
     animate('300ms ease-out')
+  ]),
+]);
+
+/* step1 */
+export const itemStateTrigger = trigger('itemState', [
+  /* step1 */
+  transition(':enter', [
+    /* step 1 */
+    // style({
+    //   opacity: 0,
+    //   transform: 'translateX(-100%)',
+    // }),
+    /* step1 */
+    // animate('500ms ease-out', style({
+    //   opacity: 1,
+    //   transform: 'translateX(0)',
+    // })),
+    /* step2 */
+    animate('500ms ease-out', keyframes([
+      /* step2 */
+      style({
+        opacity: 0,
+        transform: 'translateX(-100%)',
+        /* step3 */
+        offset: 0,
+      }),
+      /* step3 */
+      style({
+        opacity: 1,
+        transform: 'translateX(15%)',
+        offset: 0.4,
+      }),
+      /* step2 */
+      style({
+        opacity: 1,
+        transform: 'translateX(0)',
+        /* step3 */
+        offset: 1,
+      }),
+    ])),
+  ]),
+  /* step1 */
+  transition(':leave', [
+    /* step1 */
+    // animate('500ms ease-in', style({
+    //   opacity: 0,
+    //   transform: 'translateX(100%)',
+    // })),
+    /* step2 */
+    animate('500ms ease-in', keyframes([
+      style({
+        opacity: 1,
+        transform: 'translateX(0)',
+      }),
+      style({
+        transform: 'translateX(-15%)',
+      }),
+      style({
+        opacity: 0,
+        transform: 'translateX(100%)',
+      }),
+    ])),
   ]),
 ]);
