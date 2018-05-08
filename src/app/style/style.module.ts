@@ -11,10 +11,17 @@ import { ProjectComponent } from './project-style/project/project.component';
 import { ProjectsComponent } from './project-style/projects/projects.component';
 import { UsersComponent } from './project-style/users/users.component';
 import {StyleRoutingModule} from './style-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpModule,
+    RouterModule,
     StyleRoutingModule,
   ],
   declarations: [

@@ -2,7 +2,7 @@ import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/cor
 import { NgForm } from '@angular/forms';
 
 import { Project } from '../projects/project.model';
-import { buttonStateTrigger } from '../../../section5/project/new-project/animations';
+import { buttonStateTrigger } from './animations';
 
 @Component({
   selector: 'app-new-project',
