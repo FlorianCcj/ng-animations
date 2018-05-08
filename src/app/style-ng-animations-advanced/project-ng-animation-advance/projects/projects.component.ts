@@ -1,10 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 import {AnimationEvent} from '@angular/animations';
 
 import { Project } from './project.model';
 
 import { ProjectsService } from './projects.service';
-import { markedTrigger, itemStateTrigger } from './animations';
+import { markedTrigger, itemStateTrigger, slideStateTrigger } from './animations';
+import {
+  routeFadeStateTrigger,
+  routeSliderStateTrigger
+} from '../shared/route-animations';
 
 @Component({
   selector: 'app-projects',
@@ -12,10 +16,17 @@ import { markedTrigger, itemStateTrigger } from './animations';
   styleUrls: ['./projects.component.scss'],
   animations: [
     markedTrigger,
-    itemStateTrigger
+    itemStateTrigger,
+    slideStateTrigger,
+    routeFadeStateTrigger,
+    routeSliderStateTrigger
   ]
 })
 export class ProjectsComponent implements OnInit {
+/* step9 */
+// @HostBinding('@routeFadeState') routeAnimate = true;
+@HostBinding('@routeSliderState') routeAnimate = true;
+
   projects: Project[];
   /* step4 */
   displayedProjects: Project[];
@@ -49,7 +60,11 @@ export class ProjectsComponent implements OnInit {
 
   onProjectCreated(project: Project) {
     this.createNew = false;
-    this.projects.unshift(project);
+    /* step7 */
+    // this.projects.unshift(project);
+    setTimeout(() => {
+      this.projects.unshift(project);
+    }, 300);
   }
 
   /* step4 */

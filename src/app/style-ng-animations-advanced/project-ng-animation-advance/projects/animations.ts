@@ -90,4 +90,48 @@ export const itemStateTrigger = trigger('itemState', [
       }),
     ])),
   ]),
+  /* step6 */
+  transition('slidUp => slidDown', [
+    style({
+      transform: 'translateY(-100%)',
+    }),
+    animate('300ms ease-out', style({
+      transform: 'translateY(0)'
+    })),
+  ]),
+  /* step6 */
+  transition('slidDown => slidUp', [
+    style({
+      transform: 'translateY(0)',
+    }),
+    animate('300ms ease-out', style({
+      transform: 'translateY(-100%)'
+    })),
+  ]),
+]);
+
+/* step5 */
+export const slideStateTrigger = trigger('slideState', [
+/* step5 */
+transition(':enter', [
+  /* step5 */
+    style({
+      transform: 'translateY(-100%)',
+    }),
+    /* step5 */
+    animate('300ms ease-out', style({
+      transform: 'translateY(0)',
+    })),
+  ]),
+  /* step6 */
+  transition(':leave', [
+  /* step6 */
+    style({
+      transform: 'translateY(0)',
+    }),
+    /* step6 */
+    animate('300ms ease-out', style({
+      transform: 'translateY(-100%)',
+    })),
+  ]),
 ]);
