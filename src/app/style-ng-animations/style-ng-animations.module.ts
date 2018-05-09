@@ -14,10 +14,14 @@ import { AnimationWithMultipleTransitionsComponent } from './animation-with-mult
 import { AnimationWithTemporaryStateComponent } from './animation-with-temporary-state/animation-with-temporary-state.component';
 import { AnimationMultiStepTransitionComponent } from './animation-multi-step-transition/animation-multi-step-transition.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
+    HttpModule,
     BrowserAnimationsModule
   ],
   declarations: [

@@ -9,10 +9,14 @@ import { NewProjectComponent } from './projet-css-animation/new-project/new-proj
 import { ProjectComponent } from './projet-css-animation/project/project.component';
 import { ProjectsComponent } from './projet-css-animation/projects/projects.component';
 import { UsersComponent } from './projet-css-animation/users/users.component';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    HttpModule,
   ],
   declarations: [
     SimpleTransitionComponent, ComplexeTransitionComponent,
