@@ -1,0 +1,46 @@
+$header-height: 30px; 
+$footer-height: 30px; 
+
+:host {
+    display: grid;
+    grid-gap: 20px;
+
+    grid-template-columns: 1fr 500px 1fr;
+    grid-template-rows: $header-height 150px;
+    
+    grid-template-areas: 
+        "sidebar header header"
+        "sidebar content content"
+    ;
+}
+
+#header {
+    grid-area: header;
+}
+
+aside {
+    grid-area: sidebar;
+}
+
+#content {
+    grid-area: content;
+
+    display: grid;
+    grid-gap: 20px;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr $footer-height;
+    
+    grid-template-areas: 
+        "content-body"
+        "content-footer"
+    ;
+}
+
+#content-body {
+    grid-area: content-body;
+}
+
+footer {
+    grid-area: content-footer;
+}
