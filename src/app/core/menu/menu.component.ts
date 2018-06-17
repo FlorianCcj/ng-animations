@@ -43,6 +43,33 @@ export class MenuComponent implements OnInit {
           'name': 'Animation Complexe', 'icon': null,
         },
       ]
+    }, {
+      'type': 'category',
+      'link': ['ng'],
+      'name': 'Animation en angular', 'icon': null,
+      'submenu': [
+        {
+          'type': 'link',
+          'link': ['ng', 'basics'],
+          'name': 'Angular animation base', 'icon': null,
+        }, {
+          'type': 'link',
+          'link': ['ng', 'transition'],
+          'name': 'ng-animation Transition', 'icon': null,
+        }, {
+          'type': 'link',
+          'link': ['ng', 'temporary-state'],
+          'name': 'Status temporaire', 'icon': null,
+        }, {
+          'type': 'link',
+          'link': ['ng', 'multi-step-transition'],
+          'name': 'Transition Multi transition', 'icon': null,
+        }, {
+          'type': 'link',
+          'link': ['ng', 'multi-transition'],
+          'name': 'Multi transition (simultané)', 'icon': null,
+        },
+      ]
     }
   ]
 };
