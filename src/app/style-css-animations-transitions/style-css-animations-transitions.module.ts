@@ -11,12 +11,14 @@ import { ProjectsComponent } from './projet-css-animation/projects/projects.comp
 import { UsersComponent } from './projet-css-animation/users/users.component';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { StyleCssAnimationsTransitionsRoutingModule } from './style-css-animations-transitions-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     HttpModule,
+    StyleCssAnimationsTransitionsRoutingModule
   ],
   declarations: [
     SimpleTransitionComponent, ComplexeTransitionComponent,
