@@ -5,9 +5,10 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-browser/animations';
 import { RouterModule, provideRoutes } from '@angular/router';
 import { CoreModule } from './core/core.module';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CoreModule } from './core/core.module';
   ],
   imports: [
     CoreModule,
-    BrowserModule,
+    // CommonModule,
+    // BrowserModule,
     FormsModule,
     HttpModule,
     AppRoutingModule,

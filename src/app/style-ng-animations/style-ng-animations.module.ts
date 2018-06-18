@@ -13,31 +13,34 @@ import { NgAnimationIndexComponent } from './ng-animation-index/ng-animation-ind
 import { AnimationWithMultipleTransitionsComponent } from './animation-with-multiple-transitions/animation-with-multiple-transitions.component';
 import { AnimationWithTemporaryStateComponent } from './animation-with-temporary-state/animation-with-temporary-state.component';
 import { AnimationMultiStepTransitionComponent } from './animation-multi-step-transition/animation-multi-step-transition.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
+import { StyleNgAnimationsRoutingModule } from './style-ng-animations-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     HttpModule,
-    BrowserAnimationsModule,
+    StyleNgAnimationsRoutingModule,
+    // BrowserAnimationsModule,
+    // NoopAnimationsModule,
     RouterModule
   ],
   declarations: [
-    ProjetNgAnimationsComponent,
-    NewProjectComponent,
-    ProjectComponent,
-    ProjectsComponent,
-    UsersComponent,
+    // ProjetNgAnimationsComponent,
+    // NewProjectComponent,
+    // ProjectComponent,
+    // ProjectsComponent,
+    // UsersComponent,
     SimpleNgAnimationComponent,
-    AnimationWithTransitionComponent,
-    NgAnimationIndexComponent,
-    AnimationWithMultipleTransitionsComponent,
-    AnimationWithTemporaryStateComponent,
-    AnimationMultiStepTransitionComponent,
+    // AnimationWithTransitionComponent,
+    // NgAnimationIndexComponent,
+    // AnimationWithMultipleTransitionsComponent,
+    // AnimationWithTemporaryStateComponent,
+    // AnimationMultiStepTransitionComponent,
   ],
 })
 export class StyleNgAnimationsModule { }
