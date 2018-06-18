@@ -16,7 +16,7 @@ h1 {
 }
 
 /* :host-context(.boring #very-boring) { */
-:host-context('.boring #very-boring') {
+:host-context(.boring #very-boring) {
   border: 1px solid #ccc;
   color: #ccc;
 }
@@ -25,6 +25,6 @@ h1 {
   color: #ccc;
 } */
 
-:host-context('.boring #very-boring') >>> h1 {
+:host-context(.boring #very-boring) >>> h1 {
   color: #ccc;
 }
