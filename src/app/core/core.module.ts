@@ -9,7 +9,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   imports: [
     CommonModule,
-    BrowserAnimationsModule,
   ],
   declarations: [LayoutComponent, MenuComponent, HeaderComponent, FooterComponent],
   exports: [LayoutComponent]

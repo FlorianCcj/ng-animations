@@ -10,10 +10,10 @@ import { SimpleNgAnimationComponent } from './simple-ng-animation/simple-ng-anim
 
 const appRoutes: Routes = [
   { path: 'basics', component: SimpleNgAnimationComponent },
-  // { path: 'transition', component: AnimationWithTransitionComponent },
-  // { path: 'temporary-state', component: AnimationWithTemporaryStateComponent },
-  // { path: 'multi-step-transition', component: AnimationMultiStepTransitionComponent },
-  // { path: 'multi-transition', component: AnimationWithMultipleTransitionsComponent },
+  { path: 'transition', component: AnimationWithTransitionComponent },
+  { path: 'temporary-state', component: AnimationWithTemporaryStateComponent },
+  { path: 'multi-step-transition', component: AnimationMultiStepTransitionComponent },
+  { path: 'multi-transition', component: AnimationWithMultipleTransitionsComponent },
   { path: '', redirectTo: 'basics', pathMatch: 'full' },
 ];
 

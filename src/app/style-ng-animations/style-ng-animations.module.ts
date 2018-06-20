@@ -22,25 +22,22 @@ import { StyleNgAnimationsRoutingModule } from './style-ng-animations-routing.mo
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule,
-    HttpModule,
     StyleNgAnimationsRoutingModule,
-    // BrowserAnimationsModule,
-    // NoopAnimationsModule,
-    RouterModule
   ],
   declarations: [
+    SimpleNgAnimationComponent,
+    AnimationWithTransitionComponent,
+    AnimationWithTemporaryStateComponent,
+    AnimationMultiStepTransitionComponent,
+    AnimationWithMultipleTransitionsComponent,
+
     // ProjetNgAnimationsComponent,
     // NewProjectComponent,
     // ProjectComponent,
     // ProjectsComponent,
     // UsersComponent,
-    SimpleNgAnimationComponent,
-    // AnimationWithTransitionComponent,
+    // ,
     // NgAnimationIndexComponent,
-    // AnimationWithMultipleTransitionsComponent,
-    // AnimationWithTemporaryStateComponent,
-    // AnimationMultiStepTransitionComponent,
   ],
 })
 export class StyleNgAnimationsModule { }
