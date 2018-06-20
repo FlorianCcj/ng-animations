@@ -70,6 +70,37 @@ export class MenuComponent implements OnInit {
           'name': 'Multi transition (simultané)', 'icon': null,
         },
       ]
+    }, {
+      'type': 'category',
+      'link': ['nga'],
+      'name': 'Advanced Animation en angular', 'icon': null,
+      'submenu': [
+        {
+          'type': 'link', 'active': 'active',
+          'link': ['nga', 'event'],
+          'name': 'Angular animation Event', 'icon': null,
+        }, {
+          'type': 'link', 'active': 'unactive',
+          'link': ['nga', 'dimension'],
+          'name': 'dimention drop', 'icon': null,
+        }, {
+          'type': 'link', 'active': 'unactive',
+          'link': ['nga', 'keyframes'],
+          'name': 'keyframes', 'icon': null,
+        }, {
+          'type': 'link', 'active': 'unactive',
+          'link': ['nga', 'list'],
+          'name': 'list', 'icon': null,
+        }, {
+          'type': 'link', 'active': 'unactive',
+          'link': ['nga', 'meta'],
+          'name': 'meta state', 'icon': null,
+        }, {
+          'type': 'link', 'active': 'unactive',
+          'link': ['nga', 'timing'],
+          'name': 'timing', 'icon': null,
+        },
+      ]
     }
   ]
 };
@@ -80,7 +111,7 @@ export class MenuComponent implements OnInit {
   }
 
   launchRedirecte(itemMenu) {
-    if (itemMenu.type === 'link') {
+    if (itemMenu.type === 'link' && itemMenu.active !== 'unactive') {
       this.go(itemMenu.link);
     }
   }

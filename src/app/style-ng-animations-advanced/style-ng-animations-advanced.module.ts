@@ -8,16 +8,12 @@ import { TimingFunctionComponent } from './timing-function/timing-function.compo
 import { KeyframesComponent } from './keyframes/keyframes.component';
 import { AnimationEventComponent } from './animation-event/animation-event.component';
 import { ProjectNgAnimationAdvanceComponent } from './project-ng-animation-advance/project-ng-animation-advance.component';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StyleNgAnimationsAdvancedRoutingModule } from './style-ng-animations-advanced-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule,
-    HttpModule,
-    BrowserAnimationsModule
+    StyleNgAnimationsAdvancedRoutingModule
   ],
   declarations: [
     NgAnimationsAdvancedIndexComponent,
