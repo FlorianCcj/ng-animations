@@ -1,30 +1,21 @@
 In Angular everything is component.
-A component need to be, as much as posible, independant.
-we can conclude that style is not in an unique file.
-Each component have his own stylefileandif you take a component without his context it must put usable.
+<br/>A component need to be, as much as posible, independant.
+<br/>we can conclude that style is not in an unique file.
+<br/>Each component have his own stylefileandif you take a component without his context it must put usable. So multiple way to
+add style:
+<ul>
+  <li>global: in src/styles.scss</li>
+  <li>shared: files (should be in shared module) which are import for a theme</li>
+  <li>in component: each component with is own style (even if it can be shared but we'll see it later)</li>
+  <li>inline: in html balise</li>
+  <li>in header: can importe style file, which will be global</li>
+  <li>in angular-cli.json: as in header, will import fill to shared it globally</li>
+  <li>in style balise:</li>
+</ul>
+<br/> :host {{'{'}}}
+<br/> permet de focus le composant (dans un fichier css cela reviendrait a focus le document ou le body)
+<br/> on peut caster une class en fonction d'une variable grace a [ngClass]
+<br/> [ngClass]="{{'{'}}active: goal.isActiveGoal}": si isActiveGoal est a true alors le composant aura la classe active
 
-So multiple way to add style:
-* global: in src/styles.scss
-* shared: files (should be in shared module) which are import for a theme
-* in component: each component with is own style (even if it can be shared but we'll see it later)
-* inline: in html balise
-* in header: can importe style file, which will be global
-* in angular-cli.json: as in header, will import fill to shared it globally
-* in style balise: 
-
-:host {{'{'}}}
-
-permet de focus le composant (dans un fichier css cela reviendrait a focus le document ou le body)
-
-on peut caster une class en fonction d'une variable grace a [ngClass]
-
-[ngClass]="{{'{'}}active: goal.isActiveGoal}": si isActiveGoal est a true alors le composant aura la classe active
-
-
-<app-goal
-  *ngFor="let goal of courseGoals"
-  [goal]="goal"
-  [ngClass]
-  (click)="goal.isActiveGoal = !goal.isActiveGoal"
->  
+<app-goal *ngFor="let goal of courseGoals" [goal]="goal" [ngClass] (click)="goal.isActiveGoal = !goal.isActiveGoal">
 </app-goal>
