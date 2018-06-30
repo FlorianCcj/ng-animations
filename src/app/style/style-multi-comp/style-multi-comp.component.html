@@ -11,23 +11,6 @@ View Encapsulation (attribute of @Component)
   <li>encapsulation: ViewEncapsulation.None: Styles are shared accross Component</li>
 </ul>
 
-special selector:
-<ul>
-  <li>:host : target the element which host component</li>
-  <li>:host-context :style elements inside a component, depending on some condition set outside of it</li>
-  <li>/deep/ (deprecated ng v6) : apply styles not just to the elements in the template but also to child component</li>
-</ul>
-
-<pre>
-[ngClass]="{{'{'}}class1: condition}"
-[ngClass]="'class1 class2'"
-[ngClass]="[class1 class2]"
-[ngClass]="{{'{'}}'class1 class2': condition}"
-
-[ngStyle]="{{'{'}}'background-color': 'red'}"
-[ngStyle]="{{'{'}}'width.px': 200}"
-</pre>
-
 <div class="container">
   <div class="row">
     <div class="col-xs-12">

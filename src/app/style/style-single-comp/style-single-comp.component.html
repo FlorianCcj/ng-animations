@@ -12,10 +12,25 @@ add style:
   <li>in angular-cli.json: as in header, will import fill to shared it globally</li>
   <li>in style balise:</li>
 </ul>
-<br/> :host {{'{'}}}
-<br/> permet de focus le composant (dans un fichier css cela reviendrait a focus le document ou le body)
-<br/> on peut caster une class en fonction d'une variable grace a [ngClass]
+
+special angular selector:
+<ul>
+  <li>:host : target the element which host component</li>
+  <li>:host-context :style elements inside a component, depending on some condition set outside of it</li>
+  <li>/deep/ (deprecated ng v6) : apply styles not just to the elements in the template but also to child component</li>
+</ul>
+
+<br/> on peut caster une class en fonction d'un attribut grace a [ngClass]
 <br/> [ngClass]="{{'{'}}active: goal.isActiveGoal}": si isActiveGoal est a true alors le composant aura la classe active
+<pre>
+  [ngClass]="{{'{'}}class1: condition}"
+  [ngClass]="'class1 class2'"
+  [ngClass]="[class1 class2]"
+  [ngClass]="{{'{'}}'class1 class2': condition}"
+  
+  [ngStyle]="{{'{'}}'background-color': 'red'}"
+  [ngStyle]="{{'{'}}'width.px': 200}"
+</pre>
 
 <app-goal *ngFor="let goal of courseGoals" [goal]="goal" [ngClass] (click)="goal.isActiveGoal = !goal.isActiveGoal">
 </app-goal>
