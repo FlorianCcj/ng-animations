@@ -20,9 +20,10 @@ special angular selector:
   <li>/deep/ (deprecated ng v6) : apply styles not just to the elements in the template but also to child component</li>
 </ul>
 
-<br/> on peut caster une class en fonction d'un attribut grace a [ngClass]
-<br/> [ngClass]="{{'{'}}active: goal.isActiveGoal}": si isActiveGoal est a true alors le composant aura la classe active
+<br/> Class and style can be cast dynamically
+<br/> [ngClass]="{{'{'}}active: goal.isActiveGoal}": if isActiveGoal is true element will have class active
 <pre>
+  Some exemple
   [ngClass]="{{'{'}}class1: condition}"
   [ngClass]="'class1 class2'"
   [ngClass]="[class1 class2]"
@@ -32,5 +33,9 @@ special angular selector:
   [ngStyle]="{{'{'}}'width.px': 200}"
 </pre>
 
-<app-goal *ngFor="let goal of courseGoals" [goal]="goal" [ngClass] (click)="goal.isActiveGoal = !goal.isActiveGoal">
+<app-goal 
+  *ngFor="let goal of courseGoals"
+  [goal]="goal"
+  [ngClass]
+  (click)="goal.isActiveGoal = !goal.isActiveGoal">
 </app-goal>

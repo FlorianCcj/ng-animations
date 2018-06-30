@@ -1,15 +1,21 @@
-Un style générale peut s inclure de 2 manieres
-<ul>
-  <li>soit dans l angular-cli.json dans l'attribut style ;</li>
-  <li>soit dans l'index.html comme dans un html classique, avec une balise link</li>
-</ul>
+Encapsulation can be moderate.
 
-View Encapsulation (attribute of @Component)
+<br/> View Encapsulation (attribute of @Component)
 <ul>
   <li>encapsulation: ViewEncapsulation.Emulated: (default) just for the component</li>
   <li>encapsulation: ViewEncapsulation.Native: Uses natuve Shadow DOM</li>
   <li>encapsulation: ViewEncapsulation.None: Styles are shared accross Component</li>
 </ul>
+<pre>
+    import {{'{'}}ViewEncapsulation{{'}'}} from '@angular/core';
+
+    @Component({{'{'}}
+      selector: 'my-random',
+      templateUrl: 'my-random.component.html',
+      encapsulation: ViewEncapsulation.None
+      {{'}'}})
+    class MyRandomComponent {{'{'}}{{'}'}}
+</pre>
 
 <div class="container">
   <div class="row">
