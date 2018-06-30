@@ -1,29 +1,16 @@
-{{menu?.name}}
-<ul>
+<span (click)="handleToogleShowSubmenu()">{{menu?.name}}</span>
+<ul *ngIf="showSubmenu">
   <li *ngFor="let iMenu of menu.submenu" (click)="launchRedirecte(iMenu)">
     <ng-container [ngSwitch]="iMenu?.type">
-        <span *ngSwitchCase="'header'">
-          <h1>Header {{printIcon(iMenu?.icon)}} {{iMenu?.name}}</h1>
-        </span>
-        <span *ngSwitchCase="'link'">
-            {{printIcon(iMenu?.icon)}} {{iMenu?.name}}
-        </span>
-        <span *ngSwitchCase="'category'">
-            <app-menu [menu]="iMenu"></app-menu>
-        </span>
-      </ng-container>
+      <span *ngSwitchCase="'header'">
+        <h1>Header {{printIcon(iMenu?.icon)}} {{iMenu?.name}}</h1>
+      </span>
+      <span *ngSwitchCase="'link'">
+        {{printIcon(iMenu?.icon)}} {{iMenu?.name}}
+      </span>
+      <span *ngSwitchCase="'category'">
+        <app-menu [menu]="iMenu"></app-menu>
+      </span>
+    </ng-container>
   </li>
 </ul>
-
-<!--<ul> 
-    <li>advanced animation
-      <ul>
-          <li>event</li>
-          <li>dimention drop</li>
-          <li>keyframes</li>
-          <li>list</li>
-          <li>meta state</li>
-          <li>timing</li>
-        </ul>
-    </li>
-  </ul>-->

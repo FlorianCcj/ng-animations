@@ -1,11 +1,16 @@
-<p>
-  style-single-comp works!
-</p>
-Section 1, session 4
-Le style ne se fait pas dans un seul et unique fichier.
-Comme le js et le html on decoupe tout par componant.
-De la sorte on peut prendre tout le composant sans les dependances, et ca reste presentable
+In Angular everything is component.
+A component need to be, as much as posible, independant.
+we can conclude that style is not in an unique file.
+Each component have his own stylefileandif you take a component without his context it must put usable.
 
+So multiple way to add style:
+* global: in src/styles.scss
+* shared: files (should be in shared module) which are import for a theme
+* in component: each component with is own style (even if it can be shared but we'll see it later)
+* inline: in html balise
+* in header: can importe style file, which will be global
+* in angular-cli.json: as in header, will import fill to shared it globally
+* in style balise: 
 
 :host {{'{'}}}
 
