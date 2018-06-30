@@ -21,6 +21,10 @@ export class MenuComponent implements OnChanges{
         'link': ['style', 'multi-comp'],
         'name': 'Multi Style', 'icon': null,
       }, {
+        'type': 'link',
+        'link': ['style', 'project'],
+        'name': 'Project', 'icon': null,
+      }, {
         'type': 'category',
         'link': ['css'],
         'name': 'css', 'icon': null,

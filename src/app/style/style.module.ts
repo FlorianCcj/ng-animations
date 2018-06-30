@@ -14,6 +14,7 @@ import {StyleRoutingModule} from './style-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
+import { ProjectsService } from './project-style/projects/projects.service';
 
 @NgModule({
   imports: [
@@ -31,6 +32,9 @@ import { RouterModule } from '@angular/router';
     ProjectStyleComponent,
     NewProjectComponent, ProjectComponent, ProjectsComponent,
     UsersComponent
+  ],
+  providers: [
+    ProjectsService
   ]
 })
 export class StyleModule { }
